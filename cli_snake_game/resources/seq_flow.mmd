@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant M as main
+    participant G as Game
+    participant S as Snake
+    participant A as Apple
+    participant SB as Scoreboard
+    M->>G: create game
+    G->>S: create snake
+    G->>A: create apple
+    G->>SB: create scoreboard
+    M->>G: start game
+    G->>S: move snake
+    S->>G: check collision
+    G->>A: generate new position
+    G->>SB: update score
+    G->>M: end game
