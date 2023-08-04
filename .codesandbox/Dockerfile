@@ -8,20 +8,18 @@ RUN apt update &&\
 
 # Install Mermaid CLI globally
 ENV CHROME_BIN="/usr/bin/chromium" \
-    PUPPETEER_CONFIG="/app/metagpt/config/puppeteer-config.json"\
+    PUPPETEER_CONFIG="/project/home/savlmaks26/workspace/config/config.yaml"\
     PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
 RUN npm install -g @mermaid-js/mermaid-cli &&\
     npm cache clean --force
 
 # Install Python dependencies and install MetaGPT
-COPY . /app/metagpt
-RUN cd /app/metagpt &&\
-    mkdir workspace &&\
-    pip install -r requirements.txt &&\
-    pip cache purge &&\
-    python setup.py install
+COPY . /project/home/savlmaks26/workspace/metagpt
+RUN cd /project/home/savlmaks26/workspace/metagpt &&\
+    mkdir workspace
+#RUN cd /project/home/savlmaks26/workspace/ && python setup.py install
 
-WORKDIR /app/metagpt
+WORKDIR /project/home/savlmaks26/workspace/metagpt
 
 # Running with an infinite loop using the tail command
 CMD ["sh", "-c", "tail -f /dev/null"]

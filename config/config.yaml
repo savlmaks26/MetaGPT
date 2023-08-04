@@ -5,9 +5,9 @@
 ## The official OPENAI_API_BASE is https://api.openai.com/v1
 ## If the official OPENAI_API_BASE is not available, we recommend using the [openai-forward](https://github.com/beidongjiedeguang/openai-forward).
 ## Or, you can configure OPENAI_PROXY to access official OPENAI_API_BASE.
-OPENAI_API_BASE: "https://api.openai.com/v1"
+OPENAI_API_BASE: "https://chimeragpt.adventblocks.cc/api/v1"
 #OPENAI_PROXY: "http://127.0.0.1:8118"
-#OPENAI_API_KEY: "YOUR_API_KEY"
+OPENAI_API_KEY: "Zqj_0rBijRyMhBBUd_9lElcVkMzz1mdAQqZnZAU4PEc"
 OPENAI_API_MODEL: "gpt-4"
 MAX_TOKENS: 1500
 RPM: 10
