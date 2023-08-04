@@ -1,0 +1,26 @@
+classDiagram
+    class Game{
+        +start_game()
+        +end_game()
+        +update_game()
+        +draw_game()
+    }
+    class Snake{
+        +__init__(length: int, direction: str)
+        +move()
+        +grow()
+        +check_collision()
+    }
+    class Apple{
+        +__init__(position: tuple)
+        +generate_new_position()
+    }
+    class Scoreboard{
+        +__init__(file: str)
+        +load_scores()
+        +save_scores()
+        +update_score(score: int)
+    }
+    Game "1" -- "1" Snake: controls
+    Game "1" -- "1" Apple: controls
+    Game "1" -- "1" Scoreboard: uses
